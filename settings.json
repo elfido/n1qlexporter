@@ -1,0 +1,8 @@
+{
+	"httpuser": "",
+	"httppassword": "",
+	"usehttps": "false",
+	"clusters": {
+		"myClusterName": "localhost"
+	}
+}

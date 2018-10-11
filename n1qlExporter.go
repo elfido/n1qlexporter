@@ -17,6 +17,8 @@ import (
 
 var listenAddr = flag.String("listen", ":8380", "Address to listen for HTTP requests")
 
+const exporterVersion = "1.0.1"
+
 func init() {
 	initN1QLMetrics()
 }
@@ -84,6 +86,7 @@ func reportMetrics(metrics *n1qlmonitor.ClusterResponse) {
 
 func main() {
 	flag.Parse()
+	fmt.Printf("Version: %s\n", exporterVersion)
 	monitors := getMonitors()
 	renewCounter := 0
 	go func() {
